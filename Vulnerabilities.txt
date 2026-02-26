@@ -1,0 +1,3 @@
+stt pipeline expects continuous stream, if audio writer stalls it may stop recognizing 
+
+voice chat watchdog relies on incoming PCM packets to identify a disconnect and initiate a restart
