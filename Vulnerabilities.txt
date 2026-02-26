@@ -7,3 +7,5 @@ latency, leaks, and race conditions possible due to relying on FFmpegPCMAudio
 long term disk memory is unprotected from corruption, could fail to boot and lose it all
 
 azureSTT expects constant audio but discordrecv does not send silence. artificial audio injected into voice stream could cause improper endpointing
+
+currently feeding PCM packets directly into asyncio loop, could eventually cause back pressure. need a queue system "from queue import SimpleQueue" for chunking, and a back pressure monitor for occasionally disposing of oldest frames
