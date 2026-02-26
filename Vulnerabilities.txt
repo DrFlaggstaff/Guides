@@ -5,3 +5,5 @@ voice chat watchdog relies on incoming PCM packets to identify a disconnect and 
 latency, leaks, and race conditions possible due to relying on FFmpegPCMAudio
 
 long term disk memory is unprotected from corruption, could fail to boot and lose it all
+
+azureSTT expects constant audio but discordrecv does not send silence. artificial audio injected into voice stream could cause improper endpointing
