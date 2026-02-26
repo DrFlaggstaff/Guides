@@ -3,3 +3,5 @@ stt pipeline expects continuous stream, if audio writer stalls it may stop recog
 voice chat watchdog relies on incoming PCM packets to identify a disconnect and initiate a restart
 
 latency, leaks, and race conditions possible due to relying on FFmpegPCMAudio
+
+long term disk memory is unprotected from corruption, could fail to boot and lose it all
